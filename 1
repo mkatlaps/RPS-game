@@ -1,13 +1,16 @@
-human_turn = input('Ievadi savu RPS:')
-computer_turn = 'scissors'
+import random 
+turns = ['rock', 'paper', 'scissors']
+
+human_turn = input('Ievadi savu gājienu:')
+computer_turn = random.choice(turns)
 
 if human_turn == computer_turn:
-    print('Neizskirts!')
+    print('Neizšķirts!')
 elif human_turn == 'rock' and computer_turn == 'scissors':
     print('Tu uzvari!')
-elif human_turn == 'paper' and computer_turn == 'rocs':
+elif human_turn == 'paper' and computer_turn == 'rock':
     print('Tu uzvari!')
 elif human_turn == 'scissors' and computer_turn == 'paper':
     print('Tu uzvari!')
 else:
-    print('Tu zaude!')
+    print('Dators uzvar, TU zaudē!')
